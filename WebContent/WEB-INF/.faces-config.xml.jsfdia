@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{alunoBacking.cadastraAluno}:#cadastrarAluno.jsp"
+    NAME="output" PATH="/cadastrarAluno.jsp"
+    TARGET="rules:#cadastrarAluno.jsp"
+    TITLE="#{alunoBacking.cadastraAluno}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{relatorioBacking.relatorioAluno}:#relatorioAluno.jsp"
+    NAME="output" PATH="/relatorioAluno.jsp"
+    TARGET="rules:#relatorioAluno.jsp"
+    TITLE="#{relatorioBacking.relatorioAluno}:[any]" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{relatorioBacking.relatorioProfessor}:#relatorioProfessor.jsp"
+    NAME="output1" PATH="/relatorioProfessor.jsp"
+    TARGET="rules:#relatorioProfessor.jsp"
+    TITLE="#{relatorioBacking.relatorioProfessor}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::2" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID=":#{gerarExcel}:#menu.jsp" NAME="output"
+    PATH="/menu.jsp" TARGET="rules:#menu.jsp"
+    TITLE="#{gerarExcel}:[any]" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID=":#{gerarExcelProfessor}:#menu.jsp"
+    NAME="output1" PATH="/menu.jsp" TARGET="rules:#menu.jsp"
+    TITLE="#{gerarExcelProfessor}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::3" SHAPE="32,353,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::3" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{professorBacking.cadastraProfessor}:#cadastrarProfessor.jsp"
+    NAME="output" PATH="/cadastrarProfessor.jsp"
+    TARGET="rules:#cadastrarProfessor.jsp"
+    TITLE="#{professorBacking.cadastraProfessor}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::4" SHAPE="32,465,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::4" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{alunoBacking.consultaAluno}:#consultarAluno.jsp"
+    NAME="output" PATH="/consultarAluno.jsp"
+    TARGET="rules:#consultarAluno.jsp"
+    TITLE="#{alunoBacking.consultaAluno}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::5" SHAPE="32,577,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::5" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{professorBacking.consultaProfessor}:#consultarProfessor.jsp"
+    NAME="output" PATH="/consultarProfessor.jsp"
+    TARGET="rules:#consultarProfessor.jsp"
+    TITLE="#{professorBacking.consultaProfessor}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::6" SHAPE="32,689,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::6" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{professorBacking.consultaCurso}:#consultarCurso.jsp"
+    NAME="output" PATH="/consultarCurso.jsp"
+    TARGET="rules:#consultarCurso.jsp"
+    TITLE="#{professorBacking.consultaCurso}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#index.jsp" PATH="/index.jsp"
+  SHAPE="512,17,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#cadastrarAluno.jsp"
+  PATH="/cadastrarAluno.jsp" SHAPE="240,1569,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cadastrarAluno.jsp:0" NAME="item"
+   PATH="/cadastrarAluno.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#relatorioProfessor.jsp"
+  PATH="/relatorioProfessor.jsp" SHAPE="256,2177,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#relatorioProfessor.jsp:0" NAME="item"
+   PATH="/relatorioProfessor.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="voltar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="voltar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#relatorioAluno.jsp"
+  PATH="/relatorioAluno.jsp" SHAPE="256,2065,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#relatorioAluno.jsp:0" NAME="item"
+   PATH="/relatorioAluno.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="voltar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="voltar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#consultarAluno.jsp"
+  PATH="/consultarAluno.jsp" SHAPE="240,2065,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#consultarAluno.jsp:0" NAME="item"
+   PATH="/consultarAluno.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cadastrarProfessor.jsp"
+  PATH="/cadastrarProfessor.jsp" SHAPE="240,2401,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cadastrarProfessor.jsp:0" NAME="item"
+   PATH="/cadastrarProfessor.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#alterarAluno.jsp" PATH="/alterarAluno.jsp"
+  SHAPE="240,145,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#alterarAluno.jsp:0" NAME="item"
+   PATH="/alterarAluno.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#alterarProfessor.jsp"
+  PATH="/alterarProfessor.jsp" SHAPE="240,289,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#alterarProfessor.jsp:0" NAME="item"
+   PATH="/alterarProfessor.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#consultarProfessor.jsp"
+  PATH="/consultarProfessor.jsp" SHAPE="240,2529,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#consultarProfessor.jsp:0" NAME="item"
+   PATH="/consultarProfessor.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::7" SHAPE="32,833,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::7" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{alunoBacking.alterarAluno}:#alterarAluno.jsp" NAME="output"
+    PATH="/alterarAluno.jsp" TARGET="rules:#alterarAluno.jsp"
+    TITLE="#{alunoBacking.alterarAluno}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#consultarCurso.jsp"
+  PATH="/consultarCurso.jsp" SHAPE="240,2641,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#consultarCurso.jsp:0" NAME="item"
+   PATH="/consultarCurso.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="cancelar::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="cancelar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::8" SHAPE="32,977,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::8" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID=":#{professorBacking.alterarProfessor}:#alterarProfessor.jsp"
+    NAME="output" PATH="/alterarProfessor.jsp"
+    TARGET="rules:#alterarProfessor.jsp"
+    TITLE="#{professorBacking.alterarProfessor}:[any]" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#menu.jsp" PATH="/menu.jsp"
+  SHAPE="256,433,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

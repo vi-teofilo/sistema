@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="1.2"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd">
+	<!-- REGRAS DE MAPEAMENTO DE CLASSE BACKEND -->
+	<managed-bean>
+		<managed-bean-name>relatorioBacking</managed-bean-name>
+		<managed-bean-class>br.com.vitoria.sistema.backingbean.RelatorioBacking</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<!-- REGRAS DE MAPEAMENTO DE CLASSE BACKEND -->
+	<managed-bean>
+		<managed-bean-name>gerarExcel</managed-bean-name>
+		<managed-bean-class>br.com.vitoria.sistema.util.GerarExcel</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	
+	<!-- REGRAS DE MAPEAMENTO DE CLASSE BACKEND -->
+	<managed-bean>
+		<managed-bean-name>gerarExcelProfessor</managed-bean-name>
+		<managed-bean-class>br.com.vitoria.sistema.util.GerarExcelProfessor</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<!-- REGRAS DE MAPEAMENTO DE CLASSE BACKEND -->
+	<managed-bean>
+		<managed-bean-name>alunoBacking</managed-bean-name>
+		<managed-bean-class>br.com.vitoria.sistema.backingbean.AlunoBacking</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<!-- REGRAS DE MAPEAMENTO DE CLASSE BACKEND -->
+	<managed-bean>
+		<managed-bean-name>professorBacking</managed-bean-name>
+		<managed-bean-class>br.com.vitoria.sistema.backingbean.ProfessorBacking</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<!-- REGRAS DE NAVEGAÇÃO DE MENU -->
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{alunoBacking.cadastraAluno}</from-action>
+			<to-view-id>/cadastrarAluno.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<!-- REGRAS DE NAVEGAÇÃO DE MENU -->
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{relatorioBacking.relatorioAluno}</from-action>
+			<to-view-id>/relatorioAluno.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{relatorioBacking.relatorioProfessor}</from-action>
+			<to-view-id>/relatorioProfessor.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<!-- REGRAS DE NAVEGAÇÃO DE MENU -->
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{gerarExcel}</from-action>
+			<to-view-id>/menu.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{gerarExcelProfessor}</from-action>
+			<to-view-id>/menu.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRAS DE NAVEGAÇÃO DE MENU -->
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{professorBacking.cadastraProfessor}</from-action>
+			<to-view-id>/cadastrarProfessor.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{alunoBacking.consultaAluno}</from-action>
+			<to-view-id>/consultarAluno.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{professorBacking.consultaProfessor}</from-action>
+			<to-view-id>/consultarProfessor.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{professorBacking.consultaCurso}</from-action>
+			<to-view-id>/consultarCurso.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{alunoBacking.alterarAluno}</from-action>
+			<to-view-id>/alterarAluno.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<navigation-case>
+			<from-action>#{professorBacking.alterarProfessor}</from-action>
+			<to-view-id>/alterarProfessor.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+
+	<!-- REGRAS DE NAVEGAÇÃO TELA CADASTRA CLIENTE -->
+	<navigation-rule>
+		<from-view-id>/cadastrarAluno.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRAS DE NAVEGAÇÃO TELA CADASTRA VENDEDOR -->
+	<navigation-rule>
+		<from-view-id>/cadastrarProfessor.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<!-- REGRAS DE NAVEGAÇÃO TELA CONSULTA CLIENTE -->
+	<navigation-rule>
+		<from-view-id>/consultarAluno.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRAS DE NAVEGAÇÃO TELA CONSULTA VENDEDOR -->
+	<navigation-rule>
+		<from-view-id>/consultarProfessor.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	
+	<!-- REGRAS DE NAVEGAÇÃO TELA CONSULTA VENDEDOR -->
+	<navigation-rule>
+		<from-view-id>/consultarCurso.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+
+	<!-- REGRAS DE NAVEGAÇÃO TELA ALTERA CLIENTE -->
+	<navigation-rule>
+		<from-view-id>/alterarAluno.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRAS DE NAVEGAÇÃO TELA ALTERA Vendedor -->
+	<navigation-rule>
+		<from-view-id>/alterarProfessor.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>cancelar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+	<!-- REGRAS DE NAVEGAÇÃO TELA RELATORIO -->
+	<navigation-rule>
+		<from-view-id>/relatorioAluno.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>voltar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/relatorioProfessor.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>voltar</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>
