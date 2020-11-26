@@ -6,7 +6,7 @@ Sistema simples de cadastro de alunos e professores.
 
 - java 1.8
 - Tomcat 7.0
-- Projeto em Dynamic web 
+- Dynamic web Project
 
 ### O que foi aprendido
 
