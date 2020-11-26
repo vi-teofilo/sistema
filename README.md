@@ -2,12 +2,14 @@
 
 Sistema simples de cadastro de alunos e professores. 
 
-### Onde foi ultlizado
+### O que foi ultlizado
 
 - java 1.8
 - Tomcat 7.0
-- Dynamic web Project
+- Projeto em Dynamic web 
 
 ### O que foi aprendido
 
-- Aplicação com foco de aprendizado em java, css e html!.
+- Montagem de relatório utilizando Jasper; 
+- Conexão com hibernate;
+- Aplicação CRUD.
